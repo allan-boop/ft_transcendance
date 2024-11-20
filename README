@@ -1,0 +1,63 @@
+README
+
+Django :
+	Créez un environnement virtuel :
+		python3 -m venv myenv
+	Activez l'environnement virtuel :
+		source myenv/bin/activate
+	Installez Django :
+		pip install django
+	Créez un nouveau projet Django :
+		django-admin startproject transcendance
+		cd transcendance
+	Démarrez le serveur de développement :
+		python manage.py runserver
+	Ouvrir le navigateur avec le lien:
+		http://127.0.0.1:8000/
+	Ajoutez des applications à votre projet :
+		python manage.py startapp myapp
+
+
+postgreSQL
+Bootstrap
+
+Pour ajouter une dependances backend :
+	pip install nom_de_la_dependance
+	pip freeze > requirements.txt
+
+Projet Transcendence
+Pour lancer le projet avec Docker
+1. Modifier les variables d'environnement
+
+    Copiez le fichier .env.example en .env à la racine du projet.
+    Modifiez les variables d'environnement dans le fichier .env selon vos besoins.
+
+2. Lancer le projet avec Docker
+
+    Construire l'image Docker :
+    Dans le terminal, à la racine du projet, exécutez la commande suivante pour construire les images Docker :
+	docker-compose build
+
+Lancer les conteneurs Docker :
+Une fois la construction terminée, lancez les conteneurs en utilisant Docker Compose :
+
+docker-compose up
+
+Cela démarrera les conteneurs pour le back-end (Django) et le front-end (npm ou autre service si configuré).
+
+Accéder à l'application :
+Ouvrez votre navigateur et allez à l'adresse suivante pour voir l'application en local :
+
+http://127.0.0.1:8000/
+
+Vous pouvez également vérifier les logs Docker pour suivre l'exécution de l'application :
+
+    docker-compose logs -f
+
+3. Arrêter les conteneurs Docker
+
+Lorsque vous avez terminé, vous pouvez arrêter les conteneurs avec la commande suivante :
+
+docker-compose down
+
+Cela arrêtera tous les conteneurs et supprimera les ressources associées.

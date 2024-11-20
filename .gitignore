@@ -1,0 +1,20 @@
+/.env
+/node_modules/
+/myenv/
+/transcendance/
+
+# Byte-compiled / optimized / DLL files
+*.swp
+*.swo
+*.bak
+*.tmp
+*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
